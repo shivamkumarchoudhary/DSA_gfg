@@ -1,0 +1,22 @@
+/* A Binary Tree node
+class Node
+{
+    int data;
+    Node left, right;
+}*/
+
+class Solution {
+    int countLeaves(Node node) {
+        // Your code
+        if(node == null){
+            return 0;
+        }
+        if(node.left == null && node.right == null){
+            return 1;
+        }
+        
+        int countleft = countLeaves(node.left);
+        int countright = countLeaves(node.right);
+        return countleft+countright;
+    }
+}
