@@ -22,10 +22,9 @@ class Solution {
         if(root.data == key){
             return true;
         }
-        boolean left = search(root.left, key);
-        
-        boolean right = search(root.right, key);
-        
-        return left || right;
+        if(key<root.data){
+            return search(root.left,key);
+        }
+        return search(root.right,key);
     }
 }
