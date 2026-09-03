@@ -19,9 +19,9 @@ class Solution {
         
         int rightheight = height(root.right);
         
-        int max = Math.max(leftheight, rightheight);
+        int max = Math.max(leftheight, rightheight) +1;
          
-         return max +1;
+         return max ;
         
     }
 }
